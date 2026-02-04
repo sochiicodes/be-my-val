@@ -1,5 +1,7 @@
+import { ValentineCard } from "./components/ValentineCard"
+
+
 function App() {
-  
 
   return (
     <div className="min-h-screen w-full flex items-center justify-center p-4 bg-[#fff5f7] relative overflow-hidden">
@@ -15,7 +17,7 @@ function App() {
         </svg>
       </div>
       
-      {/* val can here */}
+      <ValentineCard/>
     </div>
   )
 }

@@ -7,6 +7,7 @@ export interface ConfettiPiece{
     id: number;
     x: number;
     delay: number;
+    duration: number;
     color: string;
     size: number;
 }
