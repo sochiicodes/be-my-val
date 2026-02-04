@@ -3,7 +3,7 @@ import {
   QUESTION_TEXT, 
   YES_TEXT, 
   MAYBE_TEXT, 
-  NO_TEXTS, 
+  DYNAMIC_TEXTS, 
   SUCCESS_MESSAGE, 
   SUCCESS_IMAGE, 
   YES_TOOLTIP,
@@ -22,7 +22,7 @@ export const ValentineCard = () => {
   // Starting positions offset from the center so they don't overlap the 'Yes' button initially
   const [maybePos, setMaybePos] = useState({ x: -115, y: 0 });
   const [noPos, setNoPos] = useState({ x: 115, y: 0, rotate: 0, scale: 1 });
-  const [noTextIndex, setNoTextIndex] = useState(0);
+  const [dynamicTextIndex, setDynamicTextIndex] = useState(0);
   const [showTooltip, setShowTooltip] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
 
@@ -96,7 +96,7 @@ export const ValentineCard = () => {
   const handleNoInteraction = () => {
     const pos = getRandomPosition(true);
     setNoPos(pos);
-    setNoTextIndex((prev) => (prev + 1) % NO_TEXTS.length);
+    setDynamicTextIndex((prev) => (prev + 1) % DYNAMIC_TEXTS.length);
   };
 
   const handleYes = () => {
@@ -142,7 +142,7 @@ export const ValentineCard = () => {
     <div 
       ref={cardRef}
       style={{ cursor: customCursor }}
-      className="animate-entrance relative flex flex-col items-center justify-between p-10 pb-4 bg-white/95 backdrop-blur-sm rounded-[2rem] shadow-[0_20px_50px_rgba(255,182,193,0.3)] border border-white max-w-md w-full min-h-[400px] max-h-[70vh] text-center "
+      className="animate-entrance relative flex flex-col items-center justify-between p-10 pb-4 bg-white/95 backdrop-blur-sm rounded-[2rem] shadow-[0_20px_50px_rgba(255,182,193,0.3)] border border-white max-w-md w-full min-h-[400px] max-h-[75vh] text-center "
     >
       <div className="space-y-6 z-10 pointer-events-none">
         <div className="flex justify-center animate-float -mt-20">
@@ -212,7 +212,7 @@ export const ValentineCard = () => {
           }}
           className="bg-gray-50 text-gray-400 border border-gray-200 font-medium py-2 px-6 rounded-full text-sm cursor-default whitespace-nowrap opacity-80 hover:opacity-100 z-10 select-none transition-opacity hover:shadow-md"
         >
-          {NO_TEXTS[noTextIndex]}
+          {DYNAMIC_TEXTS[dynamicTextIndex]}
         </button>
       </div>
 

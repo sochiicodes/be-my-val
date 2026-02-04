@@ -5,7 +5,7 @@
 export const GIRL_NAME = "Sochima";
 
 // The main question on the card
-export const QUESTION_TEXT = `Will you be my Valentine, ${GIRL_NAME}? 💖`;
+export const QUESTION_TEXT = `Will you be my Valentine`;
 
 // Text for the "Yes" button
 export const YES_TEXT = "Yes 💖";
@@ -17,16 +17,16 @@ export const YES_TOOLTIP = "Yes! Do it! 💃✨";
 export const MAYBE_TEXT = "Maybe 🤔";
 
 // Sequence of texts for the "No" button as it moves
-export const NO_TEXTS = [
-  "I'd be sad",
-  "Don't break my heart",
-  "Sochii No",
-  "You wanna do this?",
-  "Don't click me"
+export const DYNAMIC_TEXTS = [
+  "I'd be sad 😔",
+  "Don't break my heart 💔",
+  "Sochii No ⛔",
+  "You wanna do this? 😭",
+  "Don't click ⚠️"
 ];
 
 // Message shown after clicking "Yes"
-export const SUCCESS_MESSAGE = "You blow my mind 🤯💘";
+export const SUCCESS_MESSAGE = "I Love U Ifenkili M 💓💖💝😘";
 
 // A celebratory image or GIF URL for the success state
 export const SUCCESS_IMAGE = "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExYmpocHk4bGY2dW55c2t6cmt1ZjV3bTJkcG1pYWNtNTY0bjJsNnkxYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/SYo1DFS8NLhhqzzjMU/giphy.gif";
