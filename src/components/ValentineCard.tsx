@@ -20,8 +20,8 @@ export const ValentineCard = () => {
   const [viewState, setViewState] = useState<ViewState>('proposal');
   // const [accepted, setAccepted] = useState(false);
   // Starting positions offset from the center so they don't overlap the 'Yes' button initially
-  const [maybePos, setMaybePos] = useState({ x: -115, y: 0 });
-  const [noPos, setNoPos] = useState({ x: 115, y: 0, rotate: 0, scale: 1 });
+  const [maybePos, setMaybePos] = useState({ x: -140, y: 0 });
+  const [noPos, setNoPos] = useState({ x: 140, y: 0, rotate: 0, scale: 1 });
   const [dynamicTextIndex, setDynamicTextIndex] = useState(0);
   const [showTooltip, setShowTooltip] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
@@ -72,7 +72,7 @@ export const ValentineCard = () => {
 
     // Try a few times to find a position that is not
     // directly underneath the centered "Yes" button.
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < 60; i++) {
       const pos = createRandomPosition();
       const overlapsYes =
         Math.abs(pos.x) < forbiddenHalfWidth &&
@@ -142,7 +142,7 @@ export const ValentineCard = () => {
     <div 
       ref={cardRef}
       style={{ cursor: customCursor }}
-      className="animate-entrance relative flex flex-col items-center justify-between p-10 pb-4 bg-white/95 backdrop-blur-sm rounded-[2rem] shadow-[0_20px_50px_rgba(255,182,193,0.3)] border border-white max-w-md w-full min-h-[400px] max-h-[75vh] text-center "
+      className="animate-entrance relative flex flex-col items-center justify-between p-8 pb-4 bg-white/95 backdrop-blur-sm rounded-[2rem] shadow-[0_20px_50px_rgba(255,182,193,0.3)] border border-white max-w-md w-full min-h-[400px] max-h-[75vh] text-center "
     >
       <div className="space-y-6 z-10 pointer-events-none">
         <div className="flex justify-center animate-float -mt-20">
@@ -168,7 +168,7 @@ export const ValentineCard = () => {
         </h1>
       </div>
 
-      <div className="relative w-full h-56 flex items-center justify-center mt-4">
+      <div className="relative w-full h-80 flex items-center justify-center mt-4">
         {/* Yes Button with Tooltip */}
         <div className="relative z-20">
           {showTooltip && (
@@ -201,7 +201,7 @@ export const ValentineCard = () => {
           {MAYBE_TEXT}
         </button>
 
-        {/* No Button - Playful teasing behavior */}
+        {/* Dynamic Button - Playful teasing behavior */}
         <button
           onMouseEnter={handleNoInteraction}
           onTouchStart={handleNoInteraction}

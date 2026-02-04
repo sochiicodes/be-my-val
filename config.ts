@@ -18,7 +18,7 @@ export const MAYBE_TEXT = "Maybe 🤔";
 
 // Sequence of texts for the "No" button as it moves
 export const DYNAMIC_TEXTS = [
-  "Noooooooo 😏",
+  "Nooo 😏",
   "I'd be sad 😔",
   "Don't break my heart 💔",
   "Sochii No ⛔",
