@@ -36,5 +36,5 @@ export const SUCCESS_IMAGE = "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjEx
 export const GUY_SUCCESS_MESSAGE = "SHE SAID YES! 🥂✨";
 
 // The message sent over WhatsApp
-export const WHATSAPP_MESSAGE = `Hey! I have a response for you... I said YES! 💖 Check it out here: `;
+export const WHATSAPP_MESSAGE = `Hey! I have a response for you... GUESS?! 💖 Check it out here: `;
 
