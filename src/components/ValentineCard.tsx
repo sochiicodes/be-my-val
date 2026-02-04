@@ -60,8 +60,8 @@ export const ValentineCard = () => {
 
     // Define a "forbidden" area around the center so the teasing
     // buttons don't land underneath the main "Yes" button.
-    const forbiddenHalfWidth = 120; // horizontal area to avoid around center
-    const forbiddenHalfHeight = 60; // vertical area to avoid around center
+    const forbiddenHalfWidth = 80; // horizontal area to avoid around center
+    const forbiddenHalfHeight = 50; // vertical area to avoid around center
 
     const createRandomPosition = () => ({
       x: Math.random() * (maxX - minX) + minX,
