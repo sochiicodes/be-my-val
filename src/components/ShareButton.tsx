@@ -2,22 +2,22 @@
 import { WHATSAPP_MESSAGE } from './../../config';
 
 export const ShareButton: React.FC = () => {
+    
   const handleShare = () => {
     // Determine the base URL dynamically
-    let baseUrl = window.location.origin + window.location.pathname;
-    
-    // In some temporary environments (like certain sandboxes), origin might have a 'blob:' prefix.
-    // We strip it to ensure a valid web URL is shared.
-    if (baseUrl.startsWith('blob:')) {
-      baseUrl = baseUrl.replace('blob:', '');
-    }
-    
+    const baseUrl = `${window.location.origin}${window.location.pathname}`;
+
     // Build the shareable link with the status=accepted flag
     const shareUrl = `${baseUrl}${baseUrl.endsWith('/') ? '' : '/'}?status=accepted`;
-    const finalMsg = encodeURIComponent(`${WHATSAPP_MESSAGE}${shareUrl}`);
-    
+    const finalMsg = encodeURIComponent(
+      `${WHATSAPP_MESSAGE}\n\n${shareUrl}`
+    );
     // Open WhatsApp in a new tab
-    window.open(`https://wa.me/?text=${finalMsg}`, '_blank');
+    window.open(
+      `https://api.whatsapp.com/send?text=${finalMsg}`,
+      '_blank',
+      'noopener,noreferrer'
+    );
   };
 
   return (
