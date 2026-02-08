@@ -2,10 +2,10 @@
 // Configuration for the Valentine Proposal Page
 
 // The name of your special someone
-export const GIRL_NAME = "Sochima";
+export const GIRL_NAME = "Jeccy";
 
 // The main question on the card
-export const QUESTION_TEXT = `Will you be my Valentine`;
+export const QUESTION_TEXT = `Will you be my Val`;
 
 // Text for the "Yes" button
 export const YES_TEXT = "Yes 💖";
@@ -21,7 +21,7 @@ export const DYNAMIC_TEXTS = [
   "Nooo 😏",
   "I'd be sad 😔",
   "Don't break my heart 💔",
-  "Sochii No ⛔",
+  "Jeccy No ⛔",
   "You wanna do this? 😭",
   "Don't click ⚠️"
 ];
@@ -34,7 +34,7 @@ export const SUCCESS_IMAGE = "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjEx
 
 
 // Message shown to the guy when he opens the shared link
-export const GUY_SUCCESS_MESSAGE = "SHE SAID YES! 🥂✨";
+export const GUY_SUCCESS_MESSAGE = "JECCY SAID YES! 🥂✨";
 
 // The message sent over WhatsApp
 export const WHATSAPP_MESSAGE = `Hey! I have a response for you... GUESS?! 💖 Check it out here: `;
